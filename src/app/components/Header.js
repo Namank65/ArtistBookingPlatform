@@ -19,7 +19,7 @@ export default function Header() {
         <nav className="hidden sm:flex gap-6 text-sm font-medium text-gray-50">
           <Link href="/" className="hover:text-[#8c52ff]">Home</Link>
           <Link href="/exploreArtists" className="hover:text-[#8c52ff]">Explore Artists</Link>
-          <Link href="/onboard" className="hover:text-[#8c52ff]">Onboard</Link>
+          <Link href="/onBoard" className="hover:text-[#8c52ff]">Onboard</Link>
           <Link href="/contactUs" className="hover:text-[#8c52ff]">Contact</Link>
         </nav>
 
@@ -34,7 +34,7 @@ export default function Header() {
         <div className="sm:hidden bg-gray-950 opacity-90 px-6 pb-4 text-sm font-medium text-gray-50 space-y-3">
           <Link href="/" className="block hover:text-amber-600" onClick={() => setIsOpen(false)}>Home</Link>
           <Link href="/exploreArtists" className="block hover:text-amber-600" onClick={() => setIsOpen(false)}>Explore Artists</Link>
-          <Link href="/onboard" className="block hover:text-amber-600" onClick={() => setIsOpen(false)}>Onboard</Link>
+          <Link href="/onBoard" className="block hover:text-amber-600" onClick={() => setIsOpen(false)}>Onboard</Link>
           <Link href="/contact" className="block hover:text-amber-600" onClick={() => setIsOpen(false)}>Contact</Link>
         </div>
       )}

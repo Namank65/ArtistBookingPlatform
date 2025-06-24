@@ -5,7 +5,7 @@ const artists = [
     category: "Singer",
     location: "Mumbai",
     priceRange: "₹10,000 - ₹20,000",
-    image: "/artist1.jpg",
+    image: "/artist1.png",
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ const artists = [
     category: "DJ",
     location: "Delhi",
     priceRange: "₹20,000 - ₹30,000",
-    image: "/artist2.jpg",
+    image: "/artist2.png",
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ const artists = [
     category: "Dancer",
     location: "Kolkata",
     priceRange: "₹8,000 - ₹15,000",
-    image: "/artist3.jpg",
+    image: "/artist3.png",
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ const artists = [
     category: "Speaker",
     location: "Chennai",
     priceRange: "₹15,000 - ₹25,000",
-    image: "/artist4.jpg",
+    image: "/artist4.png",
   },
 ];
 

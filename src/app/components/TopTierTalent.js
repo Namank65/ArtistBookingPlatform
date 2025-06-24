@@ -11,8 +11,8 @@ const TopTierTalent = () => {
     router.push(`/exploreArtists?category=${category}`);
   };
   return (
-    <section className="mt-12">
-        <h2 className="text-2xl text-gray-50 font-bold mb-6 text-center">
+    <section className="mt-40">
+        <h2 className="text-2xl font-bold mb-6 text-center">
           Explore Our Top-Tier Talent in Singing, Dancing, DJing, and More
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-5xl mx-auto ">
@@ -24,7 +24,7 @@ const TopTierTalent = () => {
           <CategoryCard
             title="Dancers"
             icon={<PartyPopper className="text-primary" />}
-            onClick={() => handleCardClick("Dancers")}
+            onClick={() => handleCardClick("Dancer")}
           />
           <CategoryCard 
           title="DJs" 

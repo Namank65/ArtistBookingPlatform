@@ -4,7 +4,7 @@ import React from "react";
 const Hero = () => {
   return (
     <div>
-      <section className="bg-[#8c52ff] py-20 px-6 text-center rounded-xl">
+      <section className="bg-[#8c52ff] mt-20 shadow-2xl shadow-amber-50 py-20 px-6 text-center rounded-xl">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 animate-slideFromLeft">
           Discover and Book the Best Performing Artists 🎤
         </h1>
