@@ -32,10 +32,10 @@ export default function Header() {
 
       {isOpen && (
         <div className="sm:hidden bg-gray-950 opacity-90 px-6 pb-4 text-sm font-medium text-gray-50 space-y-3">
-          <Link href="/" className="block hover:text-amber-600" onClick={() => setIsOpen(false)}>Home</Link>
-          <Link href="/exploreArtists" className="block hover:text-amber-600" onClick={() => setIsOpen(false)}>Explore Artists</Link>
-          <Link href="/onBoard" className="block hover:text-amber-600" onClick={() => setIsOpen(false)}>Onboard</Link>
-          <Link href="/contact" className="block hover:text-amber-600" onClick={() => setIsOpen(false)}>Contact</Link>
+          <Link href="/" className="block hover:text-[#8c52ff]" onClick={() => setIsOpen(false)}>Home</Link>
+          <Link href="/exploreArtists" className="block hover:text-[#8c52ff]" onClick={() => setIsOpen(false)}>Explore Artists</Link>
+          <Link href="/onBoard" className="block hover:text-[#8c52ff]" onClick={() => setIsOpen(false)}>Onboard</Link>
+          <Link href="/contactUs" className="block hover:text-[#8c52ff]" onClick={() => setIsOpen(false)}>Contact</Link>
         </div>
       )}
     </header>

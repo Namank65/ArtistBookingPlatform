@@ -10,8 +10,8 @@ import {
 const CarouselComp = () => {
   return (
     <div>
-      <Carousel className="w-3xl flex flex-col max-w-5xl mx-auto mt-40 gap-6 ">
-        <CarouselContent className="ml-0 h-60 ">
+      <Carousel className="w-3xl flex flex-col max-w-60 sm:max-w-5xl mx-auto mt-40 gap-6 ">
+        <CarouselContent className="ml-0 h-60">
           <CarouselItem className=" bg-green-100 rounded-xl p-6 text-center flex flex-col items-center justify-center"><p className="text-lg italic mb-2">
         “Artistly helped me find the perfect DJ for my wedding. The whole booking process was so smooth and professional.”
       </p>
