@@ -1,6 +1,6 @@
 "use client";
 
-import { useForm, Controller } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { Input } from "@/components/ui/input";
@@ -9,7 +9,6 @@ import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
-import artists from "../data/artists";
 
 const categories = ["Singer", "DJ", "Dancer", "Speaker"];
 const languages = ["English", "Hindi", "Tamil", "Punjabi"];
@@ -28,7 +27,6 @@ export default function OnboardArtistPage() {
   const [image, setImage] = useState(null);
   const {
     register,
-    control,
     handleSubmit,
     watch,
     setValue,
