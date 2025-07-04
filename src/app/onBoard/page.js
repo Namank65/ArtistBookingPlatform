@@ -3,6 +3,7 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
@@ -12,11 +13,18 @@ import { useState } from "react";
 
 const categories = ["Singer", "DJ", "Dancer", "Speaker"];
 const languages = ["English", "Hindi", "Tamil", "Punjabi"];
-const feeOptions = ["₹5,000 - ₹10,000", "₹10,000 - ₹20,000", "₹20,000 - ₹30,000"];
+const feeOptions = [
+  "₹5,000 - ₹10,000",
+  "₹10,000 - ₹20,000",
+  "₹20,000 - ₹30,000",
+];
 
 const schema = yup.object().shape({
   name: yup.string().required("Name is required"),
-  bio: yup.string().min(20, "Bio should be at least 20 characters").required("Bio is required"),
+  bio: yup
+    .string()
+    .min(20, "Bio should be at least 20 characters")
+    .required("Bio is required"),
   categories: yup.array().min(1, "Select at least one category"),
   languages: yup.array().min(1, "Select at least one language"),
   fee: yup.string().required("Fee range is required"),
@@ -51,22 +59,30 @@ export default function OnboardArtistPage() {
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold mb-8 text-center text-white">Onboard as an Artist</h1>
+      <h1 className="text-3xl font-bold mb-8 text-center text-white">
+        Onboard as an Artist
+      </h1>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 bg-[#8c52ff] text-white font-bold p-6 rounded-lg shadow">
-
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="space-y-6 bg-[#8c52ff] text-white font-bold p-6 rounded-lg shadow"
+      >
         {/* Name */}
         <div>
           <Label className="font-bold">Name</Label>
           <Input {...register("name")} />
-          {errors.name && <p className="text-sm text-red-500">{errors.name.message}</p>}
+          {errors.name && (
+            <p className="text-sm text-red-500">{errors.name.message}</p>
+          )}
         </div>
 
         {/* Bio */}
         <div>
           <Label className="font-bold">Bio</Label>
           <Textarea rows={4} {...register("bio")} />
-          {errors.bio && <p className="text-sm text-red-500">{errors.bio.message}</p>}
+          {errors.bio && (
+            <p className="text-sm text-red-500">{errors.bio.message}</p>
+          )}
         </div>
 
         {/* Categories (multi-select checkbox) */}
@@ -83,7 +99,10 @@ export default function OnboardArtistPage() {
                     if (checked) {
                       setValue("categories", [...current, cat]);
                     } else {
-                      setValue("categories", current.filter((c) => c !== cat));
+                      setValue(
+                        "categories",
+                        current.filter((c) => c !== cat)
+                      );
                     }
                   }}
                 />
@@ -91,7 +110,11 @@ export default function OnboardArtistPage() {
               </div>
             ))}
           </div>
-          {errors.categories && <p className="text-sm text-red-500 mt-1">{errors.categories.message}</p>}
+          {errors.categories && (
+            <p className="text-sm text-red-500 mt-1">
+              {errors.categories.message}
+            </p>
+          )}
         </div>
 
         {/* Languages (multi-select checkbox) */}
@@ -108,7 +131,10 @@ export default function OnboardArtistPage() {
                     if (checked) {
                       setValue("languages", [...current, lang]);
                     } else {
-                      setValue("languages", current.filter((l) => l !== lang));
+                      setValue(
+                        "languages",
+                        current.filter((l) => l !== lang)
+                      );
                     }
                   }}
                 />
@@ -116,13 +142,20 @@ export default function OnboardArtistPage() {
               </div>
             ))}
           </div>
-          {errors.languages && <p className="text-sm text-red-500 mt-1">{errors.languages.message}</p>}
+          {errors.languages && (
+            <p className="text-sm text-red-500 mt-1">
+              {errors.languages.message}
+            </p>
+          )}
         </div>
 
         {/* Fee Range */}
         <div>
           <Label className="font-bold">Fee Range</Label>
-          <select {...register("fee")} className="border bg-slate-950 rounded px-3 py-2 mt-1 w-full">
+          <select
+            {...register("fee")}
+            className="border bg-slate-950 rounded px-3 py-2 mt-1 w-full"
+          >
             <option value="">Select Fee Range</option>
             {feeOptions.map((fee) => (
               <option key={fee} value={fee}>
@@ -130,14 +163,18 @@ export default function OnboardArtistPage() {
               </option>
             ))}
           </select>
-          {errors.fee && <p className="text-sm text-red-500 mt-1">{errors.fee.message}</p>}
+          {errors.fee && (
+            <p className="text-sm text-red-500 mt-1">{errors.fee.message}</p>
+          )}
         </div>
 
         {/* Location */}
         <div>
           <Label className="font-bold">Location</Label>
           <Input {...register("location")} />
-          {errors.location && <p className="text-sm text-red-500">{errors.location.message}</p>}
+          {errors.location && (
+            <p className="text-sm text-red-500">{errors.location.message}</p>
+          )}
         </div>
 
         {/* Profile Image */}
